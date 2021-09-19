@@ -1,1 +1,1 @@
-web: gunicorn hotel_management_system.wsgi
+web: "gunicorn hotel_management_system.wsgi"

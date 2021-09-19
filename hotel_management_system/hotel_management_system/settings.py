@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7lb-xs9l@z6(#0o=-rmtm!*=(f0&p7z&2nzj+j@&&81iszjmsj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['<url>']
@@ -81,10 +81,13 @@ WSGI_APPLICATION = 'hotel_management_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'Postgres',
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'hotel_db',
+        'USER': 'postgres',
+        'PASSWORD': 'holyboy191',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 

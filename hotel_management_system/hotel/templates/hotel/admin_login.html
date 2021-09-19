@@ -1,0 +1,32 @@
+{% extends 'hotel/base_admin.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <div class="card px-5 py-5 bg-light ">
+        <h3 >Login Page for Receptionist, Admin and Manager</h3>
+          <form method="post" action="">
+            {% csrf_token %}
+                {% for field in form %}
+                <p>{{field.label_tag}} {{field}} </p>
+                {% endfor %}
+
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+          </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+  {# Assumes you setup the password_reset view in your URLconf #}
+
+{% endblock content %}

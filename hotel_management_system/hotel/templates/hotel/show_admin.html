@@ -1,0 +1,31 @@
+{% extends 'hotel/base.html' %}
+{% block content%}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1> This is the show admin page</h1>
+        </div>
+
+    </div>
+</div>
+<div class="container ">
+    <div class="row justify-content-center ">
+        <div class="col-8 ">
+            <div class="card px-3 bg-light py-3">
+                <h2> {{object.username| title}}</h2>
+                <div>Email: {{ object.email }}</div>
+                <div> Firstname: {{object.firstname}}</div>
+                <div> ID: {{object.id}}</div>
+                <div> Start Date: {{object.start_date}}</div>
+                <div> Active: {{object.is_active}}</div>
+                <div> Staff: {{object.is_staff}}</div>
+                <div> Admin: {{object.is_admin}}</div>
+                <p><button><a href="{%url 'admin-edit' object.id %}">Edit Admin </a></button>  </p>
+                <p> <button><a href="{%url 'admin-delete' object.id %}">Delete Admin </a></button> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

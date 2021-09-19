@@ -1,0 +1,26 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <h1>This page is for individual rooms</h1>
+            {% for room in object_list%}
+            <div class="card py-3 my-3 px-3 shadow-sm">
+                <img class="card-img-top" src="{{room.image.url}}" height="350">
+                <div class="card-text">
+                    <p>{{room.get_type_display| title}} - {{room.price}}</p>
+                    <p> <a href="{% url 'room-single' room.id %}"> see details </a> </p>
+                </div>
+            </div>
+
+            {% empty %}
+            <p> no rooms yet</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+

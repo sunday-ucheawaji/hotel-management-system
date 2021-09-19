@@ -1,0 +1,21 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+
+<div class="container ">
+    <div class="row justify-content-center ">
+        <div class="col-8 ">
+            <h3> This page is for deleting admin</h3>
+            <div class="card px-3 bg-light py-3">
+                <form method="post">{% csrf_token %}
+                    <p>Are you sure you want to delete "{{ object }}"?</p>
+
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

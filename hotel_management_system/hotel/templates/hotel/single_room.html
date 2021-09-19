@@ -1,0 +1,23 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1> This page is for single room</h1>
+
+            <div class="card shadow-sm">
+                <img class="card" src="{{object.image.url}}">
+                <div class="card-text">
+                    <p> Type: {{object.get_type_display}}</p>
+                    <p> Price: {{object.price}}</p>
+                    <p> About: {{object.about}}</p>
+                    <p>  <a href="{% url 'room-booking' object.id %}"> <button> Book Room</button></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}}

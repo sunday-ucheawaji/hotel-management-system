@@ -1,0 +1,33 @@
+{% extends 'hotel/base.html' %}
+
+{% block content%}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <h3>This is the admin list page</h3>
+        </div>
+        <div class="col-4">
+            <div> <a href="{% url 'admin-create' %}"><button>Create Staff</button> </a> </div>
+        </div>
+    </div>
+    <div class="row  justify-content-center">
+        <div class="col-8">
+
+            <div>
+                {% for admin in object_list %}
+                <div class="card bg-light my-4 py-2 px-2">
+                    <div> Username: {{admin.username}}</div>
+                    <div> Email: {{admin.email}}</div>
+                     <div><a href="{% url 'show-admin' admin.id %}"> see details</a></div>
+                    <br>
+                </div>
+                {% empty %}
+                    <div>No admin yet.</div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

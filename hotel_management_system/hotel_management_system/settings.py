@@ -28,7 +28,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['<url>']
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['sunday-hotel.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 

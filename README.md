@@ -1,7 +1,7 @@
 # Sunday Ucheawaji
 # How to build an Hotel-Management-System
 
-This project attempts to build an hotel management system with Django. Multiple users will be making use of our website. These user include customers, receptionist, managers and Superadmin. The distinguishing factors are the permissions and authorization assigned to the users.
+This project attempts to build an hotel management system with Django. Multiple users will be making use of our website. These users include customers, receptionist, managers and Superadmin. The distinguishing factors are the permissions and authorization assigned to the users.
 An understanding of Python and basics of Django is a prerequisite to understanding this project. open this https://drive.google.com/drive/folders/1JwKQkefincizwCpZhXnsr3eCF0ZaX45z?usp=sharing for details about the task and schema.
 
 ![pexels-jonathan-borba-5563472](https://user-images.githubusercontent.com/61336165/133947900-640a960a-dddc-4405-8cb1-1bd0e17674c7.jpg)
@@ -625,4 +625,8 @@ django_heroku.settings(locals())
 ```
 Here is the ERD Diagram
 ![MicrosoftTeams-image (4)](https://user-images.githubusercontent.com/61336165/133947788-7b7379e5-e101-465b-ae79-19bc04d85975.png)
+
+# About the author
+# Sunday Ucheawaji
+I am a full stack software developer with indepth understanding of Django, React, Angular, Typescript, Python, Database and Data Analytics.
 

@@ -29,6 +29,7 @@ Let's get started
 >> python manage.py startapp hotel
 ```
 4. Then we move to configuring the CI/CD continous integration using git-hub actions and then deploy using Heroku
+
 ```
 name: Hotel Management Test Django
 on: [push, pull_request]
@@ -51,9 +52,10 @@ steps:
  run: python hms/manage.py migrate 
  — name: Run tests
  run: python3 hms/manage.py test
- 
 ```
+
 5. The models.py is populated with the following classses
+
 ```
 from django.db import models
 from django.utils import timezone
@@ -238,9 +240,10 @@ class Booking(models.Model):
 
     def __str__(self):
         return f'Booking by user {self.customer_id}'
-
 ```
+
 6. The views.py is also populated with the following functions views and class-based views
+
 ```
 # Authentication modules
 from django.contrib.auth import authenticate, login, logout
@@ -354,7 +357,9 @@ def room_payment(request,room_id):
     return render(request, 'hotel/room_payment.html', {'room': room_detail,'rooms': room_types,'room_no':room})
 
 ```
+
 7. The root urls.py is configured with the following paths
+
 ```
 from django.contrib import admin
 from django.urls import path, include
@@ -395,8 +400,11 @@ urlpatterns = [
     path('admin/<int:pk>/edit', views.EditAdmin.as_view(), name='admin-edit'),
     path('admin/<int:pk>/delete', views.DeleteAdmin.as_view(), name='admin-delete'),
 ]
+
 ```
+
 9. The following forms were created for the login forms, registration forms etc.
+
 ```
 from django import forms
 from .models import NewUser, Booking, Room
@@ -459,7 +467,9 @@ class PasswordChange(forms.Form):
     new_password = forms.CharField(max_length=150)
 
 ```
+
 10. The following models are registered  in the admin.py in order for the changes to be made from the Django Admin
+
 ```
 from django.contrib import admin
 from .models import NewUser, Room, RoomType, RoomStatus, Booking, PaymentType, Payment
@@ -474,6 +484,7 @@ admin.site.register(PaymentType)
 
 ```
 11. The folllowing changes and additions are made to the settings.py 
+
 ```
 """
 Django settings for hotel_management_system project.

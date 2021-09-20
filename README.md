@@ -1,5 +1,6 @@
 # Sunday Ucheawaji
 # How to build an Hotel Management System
+# visit the github link for a better layout
 
 This project attempts to build an hotel management system with Django. Multiple users will be making use of our website. These users include customers, receptionist, managers and Superadmin. The distinguishing factors are the permissions and authorization assigned to the users.
 An understanding of Python and basics of Django is a prerequisite to understanding this project. open this https://drive.google.com/drive/folders/1JwKQkefincizwCpZhXnsr3eCF0ZaX45z?usp=sharing for details about the task and schema.

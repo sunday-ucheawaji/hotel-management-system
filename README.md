@@ -9,9 +9,10 @@ An understanding of Python and basics of Django is a prerequisite to understandi
 
 Let's get started
 1. Set up the project using your terminal
-``` >>cd Desktop 
-    >> mkdir hotel_management_system
-    >> cd hotel_management_system
+``` 
+>>cd Desktop 
+>> mkdir hotel_management_system
+>> cd hotel_management_system
  ```
 
 2. Create your virtual environment in which you install your third party packages and activate it
